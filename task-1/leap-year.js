@@ -1,9 +1,19 @@
 import promptSync from 'prompt-sync';
 const prompt = promptSync();
 
+let yearInput = Number (prompt ('please enter a year:'));
 
-// Write your code here
-// Guidance:
-// Step 1: prompt the user to enter a year
-// Step 2: convert the user input to a number so we can perform calculations
-// Step 3: Implement the logic
+
+ if (!Number.isInteger(yearInput) || yearInput < 0){
+    console.log("Invalid year.");
+ }else if (yearInput % 400 === 0){
+    console.log("Yes " + yearInput + " is a leap year.");
+ } else if (yearInput % 4 !== 0){
+    console.log("No " + yearInput + " is not a leap year.");
+ }  else if (yearInput % 100 === 0){
+    console.log("No " + yearInput + " is not a leap year.");
+ } else {
+    console.log("Yes " + yearInput + " is a leap year.");
+ }
+
+
