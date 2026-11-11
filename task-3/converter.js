@@ -35,4 +35,6 @@ if (menuSelection === "1") {
   }
 } else if (menuSelection === "3") {
   console.log(`The current exchange rate is: 1 EUR = ${EUR_USD_RATE} USD.`);
+} else {
+  console.log("Invalid selection. Please choose 1, 2, or 3.");
 }
