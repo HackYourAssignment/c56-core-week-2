@@ -1,10 +1,11 @@
-import { errorMessage, successMessage } from "./app.js";
+// Do not change the line below
+import { errorMessage, successMessage } from './app.js';
 
 let incorrectAttempts = 0;
 
 function onLogin(username, password) {
   if (incorrectAttempts >= 3) {
-    errorMessage("Account is blocked");
+    errorMessage("Login blocked: Too many incorrect attempts");
     return;
   }
   if (
@@ -18,4 +19,5 @@ function onLogin(username, password) {
   }
 }
 
+// Do not change the line below
 export { onLogin };
